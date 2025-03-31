@@ -1,0 +1,42 @@
+#User Management Screen
+
+##Goal:
+	To develop an interface for managing users of the service.
+
+###Components & Their Behavior:
+	-**A table** which displays existing users:
+		The table's basic structure:
+			ID (integer)| User Name (string)| Email (string) | Enabled (bool)  
+		There should be a check box "Hide Disabled User" , that when checked/unchecked changes the table display
+			-If unchecked the table should display all users.
+			-If checked the table should display only users with Enabled = true.
+
+	-**A button "+New User"**: once clicked an input panel appears for adding a new user.
+	-**Input panel**: 
+		-Fields:
+			-Username (string)
+			-Display Name (string)
+			-Phone : should accept only phone numbers as input
+			-Email : should accept only emails as input
+			-User Roles : a selection of one out of three roles (Guest , Admin, SuperAdmin)
+			-Enabled: checkbox.
+		-"Save User" button: clickable only if all fields are filled. 
+###Structure:
+	- A tool bar at the top with a gray background:
+		On the left corner in order : "+New User" button, "Hide Disabled Users" checkbox
+		On the right corner: "Save user button" grayed out until a new user is being added and all fields are 			filled it turns blue to indicate clickable.
+	-Main body: 
+		The table: right below the toolbar , initialy occupys all all the space below the toolbar.When adding a 		new user it minimizes to occupy the left half of the space below the toolbar.
+###Colors & text: 
+	-**Buttons**: blue background , white text.
+	-**Text size/style is uniform for all components**.
+	-**Row of cloumn names**: blue background white text.
+	-**Toolbar**: gray background.
+	-**Others**: white background , black text.
+###Notes:
+	-While hovering over a row , background color changes to light blue , txt remains black.
+	-When selecting user roles , hovering over an opition changes its background color to blue and txt to white. 
+	-When "+New User" button is clicked : the table minimizes and occupys the left half of the space below the 	toolbar , input panel appears and occupys the right half of the toolbar.
+	-Table section should be scrollable.
+		
+	
